@@ -1,0 +1,30 @@
+{
+  "name": "noderestapi",
+  "version": "1.0.0",
+  "description": "REST API con NodeJS MySQL",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elquimeras/nodeRest.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mysql",
+    "api",
+    "rest"
+  ],
+  "author": "Daniel Alvarez @elquimeras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elquimeras/nodeRest/issues"
+  },
+  "homepage": "https://github.com/elquimeras/nodeRest#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mysql": "^2.15.0"
+  }
+}
