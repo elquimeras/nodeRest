@@ -1,10 +1,10 @@
-# nodeRest
-RESTful API con NodeJS MySQL |s @elquimeras
+# nodeRestAPI
+RESTful API con NodeJS MySQL | @elquimeras
 
 ## Instalación
 Clona el repositorio en tu maquina:
 
-    git clone https://github.com/elquimeras/nodeRest.git
+    git clone https://github.com/elquimeras/nodeRestAPI.git
 
 Entra en la carpeta creada:
 
