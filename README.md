@@ -30,5 +30,6 @@ Usa el comando
 
     node app.js
 
-## Abre tu navegador y ve a 
-http://localhost:8080/user
+## EndPoints 
+http://localhost:8080/users
+http://localhost:8080/login

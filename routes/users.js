@@ -3,16 +3,6 @@ const mysql = require('mysql');
 const router = express.Router();
 const userModel = require('../models/usersModel');
 
-// [MySQL]
-const mc = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'nodeRest'
-});
- 
-mc.connect();
-
 // Listar todos los usuarios
 router.get('/', function (req, res) {
     userModel.listUsers(function(error, data){
