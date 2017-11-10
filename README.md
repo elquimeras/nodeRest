@@ -76,7 +76,7 @@ Autenticación
 Cualquier otra ruta que no sea parte de las listadas anteriormente dará un mensaje de error en formato JSON.
 
 ## Pruebas
-Se ha proveido de un archivo nodeRestAPI.postman_collection que se encuentra alojado en la carpeta schemas.
+Se ha provisto de un archivo nodeRestAPI.postman_collection que se encuentra alojado en la carpeta schemas.
 Utiliza la aplicación postman para probar todos los endpoints contenidos en la colección.
 
 # Otras consideraciones
