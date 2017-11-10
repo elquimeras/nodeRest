@@ -2,34 +2,74 @@
 RESTful API con NodeJS MySQL | @elquimeras
 
 ## Instalación
-Clona el repositorio en tu maquina:
+Primero que nada clona el repositorio o descarga en tu maquina:
 
     git clone https://github.com/elquimeras/nodeRestAPI.git
 
-Entra en la carpeta creada:
+Luego debes entrar a la carpeta recien creada:
 
     cd nodeRest
 
-Instala las dependencias con:
+Una vez dentro instalar las dependencias utilizando el comando:
 
     npm install
 
 ## Configuración de la base de datos
-Debes crear una base de datos MYSQL en tu equipo con el nombre nodeRest o el nombre que gustes e importar users.sql a la misma.
+En este caso hemos utilizado una base de datos MySQL la cual debe ser creada en tu equipo con el nombre nodeRest o el nombre que gustes, una vez creada, importa el archivo Users.sql que se encuentra en la carpeta schemas.
 
-app.js
+Una vez creada la base de datos e importados los datos verifica en el archivo dba.js los datos de la conexión
+
 
         host: 'localhost',
         user: 'root',
         password : '',
-        port : 3306, //port mysql
-        database:'nodeRest'	
-	
+        database:'nodeRest', 
+        port : 3306
+
+Si se cambio algún parametro debe actualizarse en este archivo.
+
 ## Ejecutar la app Node
-Usa el comando
+Una vez completada la configuración no queda más que ejecutar la APP, para ello usa el comando:
 
     node app.js
 
-## EndPoints 
-http://localhost:8080/users
-http://localhost:8080/login
+Una vez iniciada el API debe estar corriendo en 
+
+    http://localhost:8080
+
+Si se cambio el puerto debes cambiar la ruta según el puerto establecido al igual que el nombre del host
+
+## Metodos del API
+Tenemos en esta API 2 puntos de acceso (endpoints) funcionales
+
+Usuarios
+
+    /users
+    - Método GET:
+        Lista todos los usuarios guardados en la tabla mock_data.
+    - Método POST:
+        Agrega un nuevo usuario: se deben enviar los parametros:
+            - first_name
+            - last_name
+            - email
+            - username
+            - password
+    -Método DELETE:
+        Eliminar un usuario de la base de datos, se debe enviar el id del usuario a eliminar.
+    - Método PUT:
+        Actualizar los datos de un usuario, se deben todos los datos del usuario incluyendo el id del usuario a modificar:
+            - first_name
+            - last_name
+            - email
+            - username
+            - password
+            - id
+
+Autenticación
+
+    /login
+    - Método POST:
+        Autenticar usuario: se deben enviar los siguientes parametros:
+            - username
+            - password
+        Retorna un objeto JSON con la respuesta true o false y los datos del usuario si fue satisfactoria la autenticación
