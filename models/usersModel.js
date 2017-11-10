@@ -1,15 +1,3 @@
-//const mysql = require('mysql');
-
-// -- Conexión a la base de datos [MySQL]
-/*const dba = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'nodeRest'
-});
- 
-dba.connect();*/
-
 // -- Declaración del objeto de la clase usuarios
 var userModel = {};
 

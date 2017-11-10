@@ -80,3 +80,6 @@ Cualquier otra ruta que no sea parte de las listadas anteriormente dará un mens
 
 - La autenticación de usuarios puede mejorarse a través del uso de tokens encriptados para mayor seguridad de los datos transmitidos.
 - Podría mejorarse haciendo uso de comunicaciones basadas en sockets para mejorar la eficiencia en los procesos y actualización de los datos en los terminales.
+- En caso de ser una app más grande se recomendaria separar los controladores y los enrutadores para mantener el modelo vista controlador.
+- Tomando en cuenta que se usa el motor MySQL no estaría de validar los datos a nivel de la base de datos haciendo uso de las propiedades ACID proveidas por MySQL (Campos unicos y auto incremento en las llaves primarias por mencionar algunos casos).
+- Se puede igualmente validar, a nivel del API, si es requerido, los campos que deben por omísión ser únicos como es el caso del Username.

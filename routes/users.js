@@ -2,14 +2,14 @@ const express = require('express');
 const router = express.Router();
 const userModel = require('../models/usersModel');
 
-// Listar todos los usuarios
+// --Listar todos los usuarios
 router.get('/', function (req, res) {
     userModel.listUsers(function(error, data){
 	 	res.send({ success: true, data: data });
 	});
 });
 
-// Agregar un nuevo usuario
+// --Agregar un nuevo usuario
 router.post('/', function (req, res) {
  	let userData = {
  		first_name : req.body.first_name,
@@ -28,7 +28,7 @@ router.post('/', function (req, res) {
 	});
 });
 
-//  Borrar un usuario
+// -- Borrar un usuario
 router.delete('/', function (req, res) {
     let userId = req.body.id;
     if (isNaN(userId)) {
@@ -44,7 +44,7 @@ router.delete('/', function (req, res) {
 	});
 }); 
 
-//  Actualizar un usuario
+// -- Actualizar un usuario
 router.put('/', function (req, res) {
     let userData = {
     	id : req.body.id,

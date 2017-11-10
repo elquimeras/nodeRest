@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const login = require('./routes/login');
 const users = require('./routes/users');
-require('./dba');
+require('./dba'); // -- Modulo de configuración global de la conexión a base de datos
 
 const app = express();
  
