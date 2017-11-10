@@ -8,7 +8,7 @@ Primero que nada clona el repositorio o descarga en tu maquina:
 
 Luego debes entrar a la carpeta recien creada:
 
-    cd nodeRest
+    cd nodeRestAPI
 
 Una vez dentro instalar las dependencias utilizando el comando:
 
@@ -18,7 +18,6 @@ Una vez dentro instalar las dependencias utilizando el comando:
 En este caso hemos utilizado una base de datos MySQL la cual debe ser creada en tu equipo con el nombre nodeRest o el nombre que gustes, una vez creada, importa el archivo Users.sql que se encuentra en la carpeta schemas.
 
 Una vez creada la base de datos e importados los datos, verifica en el archivo dba.js los datos de la conexión
-
 
         host: 'localhost',
         user: 'root',
@@ -75,6 +74,10 @@ Autenticación
         Retorna un objeto JSON con la respuesta true o false y los datos del usuario si fue satisfactoria la autenticación
 
 Cualquier otra ruta que no sea parte de las listadas anteriormente dará un mensaje de error en formato JSON.
+
+## Pruebas
+Se ha proveido de un archivo nodeRestAPI.postman_collection que se encuentra alojado en la carpeta schemas.
+Utiliza la aplicación postman para probar todos los endpoints contenidos en la colección.
 
 # Otras consideraciones
 

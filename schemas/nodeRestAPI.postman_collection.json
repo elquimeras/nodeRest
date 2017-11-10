@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "DELETE",
+			"name": "DELETE USER",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -21,7 +21,7 @@
 					"urlencoded": [
 						{
 							"key": "id",
-							"value": "NULL",
+							"value": "1",
 							"description": "",
 							"type": "text"
 						}
@@ -43,7 +43,7 @@
 			"response": []
 		},
 		{
-			"name": "CREATE",
+			"name": "CREATE USER",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -57,7 +57,7 @@
 					"urlencoded": [
 						{
 							"key": "first_name",
-							"value": " Daniel A",
+							"value": "Daniel",
 							"description": "",
 							"type": "text"
 						},
@@ -75,13 +75,13 @@
 						},
 						{
 							"key": "password",
-							"value": "1234",
+							"value": "123456",
 							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "username",
-							"value": "elquimeras",
+							"value": "DanielAlvarez",
 							"description": "",
 							"type": "text"
 						}
@@ -103,7 +103,7 @@
 			"response": []
 		},
 		{
-			"name": "READ",
+			"name": "READ USERS",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -120,6 +120,156 @@
 					]
 				},
 				"description": "Listar los usuarios"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE USER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "Usuario",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Snuuper",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "info@snuuper.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12344321",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Snuuper",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "7",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				},
+				"description": "Actualizar usuario de la base de datos"
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN Success",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "fsimanrg",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "46CNyT",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Autenticación de usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN Failed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "fsimanrg",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Autenticación de usuario"
 			},
 			"response": []
 		}
