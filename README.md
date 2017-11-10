@@ -17,7 +17,7 @@ Una vez dentro instalar las dependencias utilizando el comando:
 ## Configuración de la base de datos
 En este caso hemos utilizado una base de datos MySQL la cual debe ser creada en tu equipo con el nombre nodeRest o el nombre que gustes, una vez creada, importa el archivo Users.sql que se encuentra en la carpeta schemas.
 
-Una vez creada la base de datos e importados los datos verifica en el archivo dba.js los datos de la conexión
+Una vez creada la base de datos e importados los datos, verifica en el archivo dba.js los datos de la conexión
 
 
         host: 'localhost',
@@ -73,3 +73,10 @@ Autenticación
             - username
             - password
         Retorna un objeto JSON con la respuesta true o false y los datos del usuario si fue satisfactoria la autenticación
+
+Cualquier otra ruta que no sea parte de las listadas anteriormente dará un mensaje de error en formato JSON.
+
+# Otras consideraciones
+
+- La autenticación de usuarios puede mejorarse a través del uso de tokens encriptados para mayor seguridad de los datos transmitidos.
+- Podría mejorarse haciendo uso de comunicaciones basadas en sockets para mejorar la eficiencia en los procesos y actualización de los datos en los terminales.
